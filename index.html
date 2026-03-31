@@ -11,173 +11,78 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Outfit:wght@300;400;600;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-dark text-light overflow-x-hidden">
-    <!-- Boot Screen Loader -->
-    <div id="loader" class="loader-overlay">
-        <div class="loader-content">
-            <div class="loader-term">
-                <span class="prompt">></span> <span id="boot-text">Initializing system...</span><span
-                    class="cursor">_</span>
-            </div>
-            <div class="progress-bar-container">
-                <div id="boot-progress" class="progress-bar"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Background Elements -->
-    <div class="grid-overlay"></div>
-    <div class="blob-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+<body>
+    <!-- Tech Layers -->
+    <div class="tech-bg"></div>
+    <div class="blob" style="top: 10%; right: 5%;"></div>
+    <div class="blob" style="bottom: 10%; left: 5%; opacity: 0.05;"></div>
 
     <!-- Navigation -->
-    <nav class="navbar glass-nav sticky-nav">
-        <div class="nav-container main-container">
-            <a href="#hero" class="logo">
-                <span class="text-accent-blue">R</span>aghu<span class="text-accent-purple">.R</span>
-            </a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">[ RAGHU <span>R.</span> ]</a>
             <ul class="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">History</a></li>
-                <li><a href="#contact" class="nav-link btn-contact-nav">Contact</a></li>
+                <li><a href="#about" class="nav-link">About_</a></li>
+                <li><a href="#projects" class="nav-link">Modules_</a></li>
+                <li><a href="#experience" class="nav-link">History_</a></li>
+                <li><a href="#contact" class="nav-link">Connect_</a></li>
             </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
         </div>
     </nav>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section min-vh-100 flex-center">
-            <div class="main-container grid-2">
-                <div class="hero-content">
-                    <div class="badge-container">
-                        <span class="badge">SYSTEM READY</span>
-                        <span class="badge-status">v3.0.4 - ACTIVE</span>
-                    </div>
-                    <h1 class="hero-title">
-                        Building <span class="text-gradient">Resilient</span><br>
-                        Systems for the Future.
-                    </h1>
-                    <div class="hero-intro">
-                        <span class="typing-text" id="typing-intro"></span><span class="cursor">|</span>
-                    </div>
-                    <p class="hero-description text-muted">
-                        B.Tech CSBS 3rd-year student specializing in architecting secure, full-stack ecosystems.
-                        Focused on bridging complex backend logic with seamless user experiences.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View Modules</a>
-                        <a href="#contact" class="btn btn-outline">Initialize Connection</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="system-dashboard glass-panel">
-                        <div class="dashboard-header">
-                            <div class="dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="title">raghu_backend.main</div>
-                        </div>
-                        <div class="dashboard-body">
-                            <div class="stat-row">
-                                <span class="stat-label">STATUS</span>
-                                <span class="stat-value text-accent-blue">OPTIMAL</span>
-                            </div>
-                            <div class="stat-row">
-                                <span class="stat-label">SECURITY</span>
-                                <span class="stat-value text-accent-purple">ENHANCED</span>
-                            </div>
-                            <div class="chart-visual">
-                                <div class="chart-bar" style="height: 60%"></div>
-                                <div class="chart-bar" style="height: 80%"></div>
-                                <div class="chart-bar" style="height: 40%"></div>
-                                <div class="chart-bar" style="height: 90%"></div>
-                                <div class="chart-bar" style="height: 70%"></div>
-                            </div>
-                            <div class="log-output">
-                                <div class="log-line">> Establishing secure socket...</div>
-                                <div class="log-line">> Fetching active repositories...</div>
-                                <div class="log-line">> Loading full_stack_architecture.so</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span class="scroll-text">SCROLL TO EXPLORE</span>
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="padding-y reveal">
+        <section id="hero" class="hero-section">
             <div class="main-container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title">The <span class="text-accent-blue">Developer</span> Mentality</h2>
-                    <div class="section-divider mx-auto"></div>
-                </div>
-                <div class="about-grid grid-2 mt-5">
-                    <div class="about-text glass-panel p-5">
-                        <h3 class="mb-3">Problem → Solution → System</h3>
-                        <p>
-                            As a <strong>B.Tech Computer Science & Business Systems</strong> student, I don't just write
-                            code; I design solutions that align technology with strategic goals. My mindset is rooted in
-                            understanding the "why" before the "how".
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-tag">STATUS: CORE_SYSTEM_ACTIVE</div>
+                        <h1 class="hero-title">
+                            Building <span>Resilient</span>
+                            Architectures.
+                        </h1>
+                        <p class="hero-desc">
+                            3rd-year B.Tech CSBS student at <strong>Panimalar Engineering College</strong>.
+                            Architecting secure software ecosystems and bridging complex backend logic with seamless
+                            user experiences.
                         </p>
-                        <p class="mt-3">
-                            Whether it's securing software supply chains or architecting complex enterprise platforms, I
-                            focus on building resilient, scalable, and secure systems that stand the test of time.
-                        </p>
-                        <ul class="mindset-list mt-4">
-                            <li><span class="icon">🔍</span> Security-First Approach</li>
-                            <li><span class="icon">⚡</span> Performance Optimization</li>
-                            <li><span class="icon">🏗️</span> Modular Scalability</li>
-                        </ul>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">Decrypt Works</a>
+                            <a href="249_Raghu_R_Resume_ATS.docx" class="btn btn-outline" download>Fetch Resume</a>
+                        </div>
+                        <div class="social-links-hero">
+                            <a href="https://www.linkedin.com/in/raghu0805" target="_blank" class="social-item"><i
+                                    class="fab fa-linkedin"></i> LINKEDIN_</a>
+                            <a href="https://leetcode.com/u/Raghu249/" target="_blank" class="social-item"><i
+                                    class="fas fa-terminal"></i> LEETCODE_</a>
+                            <a href="https://www.hackerrank.com/profile/imraghu0805" target="_blank"
+                                class="social-item"><i class="fab fa-hackerrank"></i> HACKERRANK_</a>
+                            <a href="https://www.geeksforgeeks.org/profile/imraghhnwv" target="_blank"
+                                class="social-item"><i class="fas fa-code"></i> GFG_</a>
+                        </div>
                     </div>
-                    <div class="about-stats glass-panel p-5">
-                        <div class="stat-item mb-4">
-                            <div class="stat-header d-flex justify-content-between mb-2">
-                                <span>Problem Solving</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="progress-bar-bg">
-                                <div class="progress-bar-fill slide-in"
-                                    style="width: 95%; background: var(--accent-blue);"></div>
-                            </div>
-                        </div>
-                        <div class="stat-item mb-4">
-                            <div class="stat-header d-flex justify-content-between mb-2">
-                                <span>System Architecture</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress-bar-bg">
-                                <div class="progress-bar-fill slide-in"
-                                    style="width: 90%; background: var(--accent-purple);"></div>
-                            </div>
-                        </div>
-                        <div class="stat-item mb-4">
-                            <div class="stat-header d-flex justify-content-between mb-2">
-                                <span>Full Stack Logic</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="progress-bar-bg">
-                                <div class="progress-bar-fill slide-in"
-                                    style="width: 88%; background: var(--accent-blue);"></div>
+                    <div class="hero-visual">
+                        <div class="photo-visual-shell">
+                            <div class="cyber-frame">
+                                <div class="frame-border"></div>
+                                <div class="frame-border-bottom"></div>
+                                <div class="image-container">
+                                    <img src="Raghu_photo.png" alt="Raghu R" class="main-img">
+                                    <div class="scan-line"></div>
+                                </div>
+                                <div class="tech-tag tag-1">
+                                    <span style="display: block; opacity: 0.5;">ID//ENTITY</span>
+                                    <span>MERN DEVELOPER</span>
+                                </div>
+                                <div class="tech-tag tag-2">
+                                    <span style="display: block; opacity: 0.5;">ACCESS_CODE</span>
+                                    <span>ADMIN_RAGHU_0805</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,276 +90,208 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="padding-y bg-alt reveal">
+
+        <!-- System Log Archive (Achievements) -->
+        <section class="section-padding">
             <div class="main-container">
-                <div class="section-header mb-5">
-                    <h2 class="section-title">Active <span class="text-accent-purple">Modules</span></h2>
-                    <p class="text-muted">High-impact systems engineered for security and scalability.</p>
+                <div class="achievement-system-log">
+                    <div class="log-header">
+                        <span class="log-title"><i class="fas fa-terminal"></i> ACHIEVEMENT_RECORD_001</span>
+                        <span class="log-status">STATUS: VERIFIED</span>
+                    </div>
+                    <div class="log-body-content">
+                        <div class="log-main-info">
+                            <span class="log-label">_RANK</span>
+                            <h3 class="log-value">IST PLACE_WINNER</h3>
+                            <p class="log-desc">
+                                Secured first place at <strong>SA Engineering College, Chennai Hackathon</strong> (36
+                                Hours).
+                                Specialized in the **Cybersecurity & Digital Trust** domain with a focus on threat
+                                analysis and resilient security architecture.
+                            </p>
+                        </div>
+                        <div class="log-metadata">
+                            <div class="meta-item">
+                                <span class="meta-label">DOMAIN</span>
+                                <span class="meta-val">CYBER_SECURITY</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">DURATION</span>
+                                <span class="meta-val">36:00_HRS</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">VENUE</span>
+                                <span class="meta-val">CHENNAI_IND</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="projects-grid grid-2 gap-4">
+            </div>
+        </section>
+
+        <!-- Technical Skill Matrix -->
+        <section id="skills" class="section-padding" style="background: rgba(255, 45, 117, 0.02);">
+            <div class="main-container">
+                <h2 class="section-title">Technical <span>Matrix_</span></h2>
+                <div class="skills-grid-main">
+                    <!-- Category 01 -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <span class="module-id">ID: 01_CORE</span>
+                            <h4>PROGRAMMING_LANG</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag-tech">Python</span>
+                            <span class="tag-tech">JavaScript (JS)</span>
+                            <span class="tag-tech">Java</span>
+                        </div>
+                    </div>
+                    <!-- Category 02 -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <span class="module-id">ID: 02_FRONT</span>
+                            <h4>FRONTEND_ENGINE</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag-tech">HTML5</span>
+                            <span class="tag-tech">CSS3</span>
+                            <span class="tag-tech">Tailwind CSS</span>
+                            <span class="tag-tech">React.js</span>
+                        </div>
+                    </div>
+                    <!-- Category 03 -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <span class="module-id">ID: 03_BACK</span>
+                            <h4>BACKEND_LOGIC</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag-tech">Node.js</span>
+                            <span class="tag-tech">Express.js</span>
+                            <span class="tag-tech">FastAPI</span>
+                        </div>
+                    </div>
+                    <!-- Category 04 -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <span class="module-id">ID: 04_DATA</span>
+                            <h4>DATABASE_SYSTEMS</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag-tech">MongoDB</span>
+                            <span class="tag-tech">PostgreSQL</span>
+                            <span class="tag-tech">Firebase Firestore</span>
+                        </div>
+                    </div>
+                    <!-- Category 05 -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <span class="module-id">ID: 05_OPS</span>
+                            <h4>DEVOPS_VCS</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag-tech">Git</span>
+                            <span class="tag-tech">GitHub</span>
+                            <span class="tag-tech">Docker</span>
+                            <span class="tag-tech">n8n</span>
+                        </div>
+                    </div>
+                    <!-- Category 06 -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <span class="module-id">ID: 06_SUBJ</span>
+                            <h4>CORE_THEORY</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="tag-tech">DSA</span>
+                            <span class="tag-tech">OOP</span>
+                            <span class="tag-tech">Networks</span>
+                            <span class="tag-tech">DBMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section id="projects" class="section-padding">
+            <div class="main-container">
+                <h2 class="section-title">Active <span>Modules_</span></h2>
+                <div class="projects-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
                     <!-- Project 1 -->
-                    <div class="project-card glass-panel" data-tilt>
-                        <div class="project-image">
-                            <div class="project-graphic security-graphic">
-                                <div class="shield-icon"></div>
-                                <div class="code-overlay">
-                                    <span>pkg install integrity-check</span>
-                                </div>
-                            </div>
-                            <div class="image-overlay">
-                                <span class="tag">Security</span>
-                                <span class="tag">Full Stack</span>
-                            </div>
-                        </div>
-                        <div class="project-info p-4">
-                            <h3>Supply Chain Trust Analyzer</h3>
-                            <p class="text-muted mt-2">End-to-end security suite for detecting typosquatting and
-                                vulnerabilities using recursive SBOM generation.</p>
-                            <div class="project-footer mt-4">
-                                <div class="tech-stack mb-3">
-                                    <span class="tech-tag">Node.js</span><span class="tech-tag">React</span><span
-                                        class="tech-tag">Express</span>
-                                </div>
-                                <a href="https://github.com/sailesh-konimetee/dependence_checker" target="_blank" rel="noopener noreferrer" class="btn-link">View Details <span class="arrow">&rarr;</span></a>
-                            </div>
-                        </div>
+                    <div class="project-glass"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 3rem; position: relative;">
+                        <span
+                            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-pink); margin-bottom: 1rem; display: block;">/M01_SECURITY</span>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Supply Chain Trust
+                            Analyzer</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">Security suite for
+                            detecting typosquatting & vulnerabilities in deep dependency trees.</p>
+                        <a href="https://github.com/sailesh-konimetee/dependence_checker" target="_blank"
+                            style="color: #fff; text-decoration: none; font-weight: 700; border-bottom: 1px solid var(--accent-pink); padding-bottom: 4px;">Initialize
+                            Debug →</a>
                     </div>
-
-                    <!-- Project 2: Investor Matcher -->
-                    <div class="project-card glass-panel" data-tilt>
-                        <div class="project-image">
-                            <div class="project-graphic investor-graphic">
-                                <div class="nodes-icon">
-                                    <span class="node"></span>
-                                    <span class="node"></span>
-                                    <span class="node"></span>
-                                </div>
-                                <div class="pulse-ring"></div>
-                            </div>
-                            <div class="image-overlay">
-                                <span class="tag">AI Matching</span>
-                                <span class="tag">FinTech</span>
-                            </div>
-                        </div>
-                        <div class="project-info p-4">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h3>Investor Match Application</h3>
-                                <span class="badge-status">FEB 2025 - MAR 2025</span>
-                            </div>
-                            <p class="text-muted mt-2">Full-stack platform using <strong>embedding-based semantic
-                                    matching</strong> and cosine similarity to connect startups with investors (+40%
-                                accuracy over keyword search).</p>
-                            <p class="text-muted small mt-2">Engineered 10+ secure RESTful APIs with RBAC & JWT;
-                                optimized MongoDB schemas reducing query times by 30%.</p>
-                            <div class="project-footer mt-4">
-                                <div class="tech-stack mb-3">
-                                    <span class="tech-tag">Node.js</span><span class="tech-tag">Express.js</span><span
-                                        class="tech-tag">MongoDB</span><span class="tech-tag">JWT</span>
-                                </div>
-                                <a href="https://github.com/raghu0805/investormatch" target="_blank" rel="noopener noreferrer" class="btn-link">View Details <span class="arrow">&rarr;</span></a>
-                            </div>
-                        </div>
+                    <!-- Project 2 -->
+                    <div class="project-glass"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 3rem;">
+                        <span
+                            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-pink); margin-bottom: 1rem; display: block;">/M02_AI_ENGINE</span>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Investor Match App
+                        </h3>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">Full-stack semantic
+                            search platform connecting startups with strategic investor networks.</p>
+                        <a href="https://github.com/raghu0805/investormatch" target="_blank"
+                            style="color: #fff; text-decoration: none; font-weight: 700; border-bottom: 1px solid var(--accent-pink); padding-bottom: 4px;">Initialize
+                            Engine →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="padding-y reveal">
+        <!-- Experience -->
+        <section id="experience" class="section-padding">
             <div class="main-container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title">Technical <span class="text-accent-blue">Stack</span></h2>
-                    <div class="section-divider mx-auto"></div>
-                </div>
-                <div class="skills-grid grid-3 gap-4">
-                    <div class="skill-category glass-panel p-4">
-                        <div class="category-header d-flex align-items-center mb-4">
-                            <div class="category-icon me-3">⚡</div>
-                            <h4>Frontend Engine</h4>
+                <h2 class="section-title">Timeline <span>Log_</span></h2>
+                <div style="border-left: 2px solid var(--glass-border); padding-left: 3rem; margin-left: 1rem;">
+                    <div class="timeline-log" style="position: relative; margin-bottom: 4rem;">
+                        <div
+                            style="position: absolute; left: -3.4rem; top: 0rem; width: 12px; height: 12px; background: var(--accent-pink); box-shadow: 0 0 10px var(--accent-glow);">
                         </div>
-                        <div class="skill-tags d-flex flex-wrap gap-2">
-                            <span class="skill-tag">HTML5/CSS3</span>
-                            <span class="skill-tag">Modern JS (ES6+)</span>
-                            <span class="skill-tag">React.js</span>
-                            <span class="skill-tag">Vite</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                        </div>
-                    </div>
-                    <div class="skill-category glass-panel p-4">
-                        <div class="category-header d-flex align-items-center mb-4">
-                            <div class="category-icon me-3">⚙️</div>
-                            <h4>Backend Logic</h4>
-                        </div>
-                        <div class="skill-tags d-flex flex-wrap gap-2">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express.js</span>
-                            <span class="skill-tag">REST APIs</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                        </div>
-                    </div>
-                    <div class="skill-category glass-panel p-4">
-                        <div class="category-header d-flex align-items-center mb-4">
-                            <div class="category-icon me-3">🛠️</div>
-                            <h4>Dev Tools</h4>
-                        </div>
-                        <div class="skill-tags d-flex flex-wrap gap-2">
-                            <span class="skill-tag">Git/GitHub</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Vercel</span>
-                        </div>
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-pink);">2022
+                            - PRESENT</span>
+                        <h3 style="font-size: 2rem; margin: 0.5rem 0;">B.Tech in CSBS</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px;">Pursuing undergraduate
+                            degree at <strong>Panimalar Engineering College</strong>. Focusing on the intersection of
+                            deep technical architecture and business optimization.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="padding-y bg-alt reveal">
-            <div class="main-container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title">Educational <span class="text-accent-purple">Journey</span></h2>
-                    <div class="section-divider mx-auto"></div>
-                </div>
-                <div class="timeline-container max-w-800 mx-auto">
-                    <div class="timeline-item d-flex">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content glass-panel p-5 w-100">
-                            <span class="timeline-date badge mb-2">2022 - PRESENT</span>
-                            <h4 class="mb-1">B.Tech in Computer Science & Business Systems</h4>
-                            <p class="institution text-accent-blue mb-4">Undergraduate Student | 3rd Year</p>
-                            <p class="description text-muted">Bridging deep technical concepts with business-oriented
-                                architecture. Actively developing systems that solve real-world complexities through
-                                full-stack implementation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LeetCode Stats Section -->
-        <section id="leetcode" class="padding-y reveal">
-            <div class="main-container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title">Algorithmic <span class="text-accent-blue">Prowess</span></h2>
-                    <div class="section-divider mx-auto"></div>
-                </div>
-                <div class="stats-grid glass-panel p-5">
-                    <div class="grid-3 gap-4 text-center">
-                        <div class="stat-card">
-                            <h4 class="text-muted small mb-2">TOTAL_SOLVED</h4>
-                            <div class="stat-value display-1 text-accent-blue" id="lc-total">0</div>
-                        </div>
-                        <div class="stat-card">
-                            <h4 class="text-muted small mb-2">ACCEPTANCE_RATE</h4>
-                            <div class="stat-value display-1 text-accent-purple" id="lc-acceptance">--%</div>
-                        </div>
-                        <div class="stat-card">
-                            <h4 class="text-muted small mb-2">GLOBAL_RANKING</h4>
-                            <div class="stat-value display-1 text-accent-blue" id="lc-ranking">--</div>
-                        </div>
-                    </div>
-                    <div class="lc-breakdown mt-5">
-                        <div class="breakdown-item mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="text-success small">EASY</span>
-                                <span id="lc-easy-count" class="small">0/0</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill bg-success" id="lc-easy-bar" style="width: 0%"></div></div>
-                        </div>
-                        <div class="breakdown-item mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="text-warning small">MEDIUM</span>
-                                <span id="lc-medium-count" class="small">0/0</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill bg-warning" id="lc-medium-bar" style="width: 0%"></div></div>
-                        </div>
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="text-danger small">HARD</span>
-                                <span id="lc-hard-count" class="small">0/0</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill bg-danger" id="lc-hard-bar" style="width: 0%"></div></div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-5">
-                        <a href="https://leetcode.com/u/Raghu249/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Explore LeetCode Profile</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="padding-y reveal">
-            <div class="main-container">
-                <div class="contact-wrapper glass-panel overflow-hidden">
-                    <div class="grid-2">
-                        <div class="contact-info p-5 bg-gradient-dark">
-                            <h2 class="section-title mb-4">Let's <span class="text-accent-blue">Collaborate</span></h2>
-                            <p class="text-muted mb-5">Establishing a high-bandwidth connection for impactful
-                                engineering and innovative systems.</p>
-                            <div class="contact-links mt-auto">
-                                <div class="contact-item d-flex align-items-center mb-4">
-                                    <div class="contact-icon me-3">📧</div>
-                                    <div>
-                                        <div class="label text-muted small">EMAIL</div>
-                                        <div class="value">sde.raghu.r@gmail.com</div>
-                                    </div>
-                                </div>
-                                <div class="contact-item d-flex align-items-center mb-4">
-                                    <div class="contact-icon me-3">🔗</div>
-                                    <div>
-                                        <div class="label text-muted small">LINKEDIN</div>
-                                        <div class="value">www.linkedin.com/in/raghu0805</div>
-                                    </div>
-                                </div>
-                                <div class="contact-item d-flex align-items-center">
-                                    <div class="contact-icon me-3">💻</div>
-                                    <div>
-                                        <div class="label text-muted small">GITHUB</div>
-                                        <div class="value">/raghu0805</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="contact-form-side p-5">
-                            <form id="contact-form" class="cyber-form" action="https://n8ninvestormatch.tech/webhook/portfolio_message/" method="POST" target="hidden_iframe">
-                                <div class="form-row mb-4">
-                                    <label for="name" class="d-block mb-1 small text-accent-blue">NAME</label>
-                                    <input type="text" id="name" name="from_name" class="cyber-input" placeholder="Full Name" required>
-                                </div>
-                                <div class="form-row mb-4">
-                                    <label for="email" class="d-block mb-1 small text-accent-blue">EMAIL</label>
-                                    <input type="email" id="email" name="from_email" class="cyber-input" placeholder="Email Address"
-                                        required>
-                                </div>
-                                <div class="form-row mb-5">
-                                    <label for="message" class="d-block mb-1 small text-accent-blue">MESSAGE</label>
-                                    <textarea id="message" name="message" class="cyber-input" rows="4" placeholder="Your Message..."
-                                        required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100 py-3">Transmit Message</button>
-                            </form>
-                            <!-- Hidden iframe to handle response without refreshing the page -->
-                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-                        </div>
-                    </div>
+        <!-- Contact -->
+        <section id="contact" class="section-padding">
+            <div class="main-container" style="text-align: center;">
+                <h2 class="section-title">Start <span>Connection_</span></h2>
+                <p
+                    style="color: var(--text-muted); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Establishing a high-bandwidth connection for impactful engineering and innovative systems.</p>
+                <a href="mailto:sde.raghu.r@gmail.com" class="btn btn-primary"
+                    style="padding: 1.5rem 4rem; font-size: 1.2rem;">Transmit: sde.raghu.r@gmail.com</a>
+                <div class="social-footer"
+                    style="margin-top: 5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <a href="https://www.linkedin.com/in/raghu0805" target="_blank"
+                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">LINKEDIN_</a>
+                    <a href="https://leetcode.com/u/Raghu249/" target="_blank"
+                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">LEETCODE_</a>
+                    <a href="https://www.hackerrank.com/profile/imraghu0805" target="_blank"
+                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">HACKERRANK_</a>
+                    <a href="https://www.geeksforgeeks.org/profile/imraghhnwv" target="_blank"
+                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">GFG_</a>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer py-5 border-top border-dark mt-5">
-        <div class="main-container d-flex justify-content-between align-items-center flex-wrap gap-4">
-            <div class="copyright small text-muted">
-                &copy; 2026 Raghu R. All modules fully operational. Built with pure logic.
-            </div>
-            <div class="footer-links d-flex gap-4 small">
-                <a href="#" class="text-muted text-decoration-none hover-light">v3.0.4 - LIVE</a>
-                <a href="#" class="text-muted text-decoration-none hover-light">SYSTEM_STATUS: OK</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

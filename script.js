@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
 
-    // 4. Parallax Effect for Hero Dashboard
-    const dashboard = document.querySelector('.system-dashboard');
-    if (dashboard) {
+    // 4. Parallax Effect for Cyber Photo Frame
+    const cyberFrame = document.querySelector('.cyber-frame');
+    if (cyberFrame) {
         window.addEventListener('mousemove', (e) => {
             const x = (window.innerWidth / 2 - e.pageX) / 40;
             const y = (window.innerHeight / 2 - e.pageY) / 40;
-            dashboard.style.transform = `perspective(1000px) rotateY(${x - 10}deg) rotateX(${-y + 5}deg)`;
+            cyberFrame.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
         });
     }
     // 5. Mobile Menu Toggle (Basic)
