@@ -1,5 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ==================== MOBILE NAV TOGGLE ====================
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle && navLinks) {
+        // Create overlay element
+        const overlay = document.createElement('div');
+        overlay.classList.add('nav-overlay');
+        document.body.appendChild(overlay);
+
+        function toggleNav() {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeNav() {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        navToggle.addEventListener('click', toggleNav);
+        overlay.addEventListener('click', closeNav);
+
+        // Close menu when a nav link is clicked
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeNav);
+        });
+    }
+
     // ==================== LOAD ADMIN DATA ====================
     function loadPortfolioData() {
         try {

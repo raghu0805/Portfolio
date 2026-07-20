@@ -26,7 +26,12 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#hero" class="logo">[ RAGHU <span>R.</span> ]</a>
-            <ul class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-link">About_</a></li>
                 <li><a href="#projects" class="nav-link">Modules_</a></li>
                 <li><a href="#experience" class="nav-link">History_</a></li>
@@ -72,15 +77,28 @@
                                 <div class="frame-border"></div>
                                 <div class="frame-border-bottom"></div>
                                 <div class="image-container">
-                                    <img src="Raghu_photo.png" alt="Raghu R" class="main-img">
+                                    <div class="avatar-visual">
+                                        <div class="avatar-monogram">R</div>
+                                        <div class="avatar-ring"></div>
+                                        <div class="avatar-ring avatar-ring-2"></div>
+                                        <div class="avatar-particles">
+                                            <span></span><span></span><span></span>
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                        <div class="avatar-code-lines">
+                                            <span>&lt;system.init /&gt;</span>
+                                            <span>access: granted</span>
+                                            <span>status: online</span>
+                                        </div>
+                                    </div>
                                     <div class="scan-line"></div>
                                 </div>
                                 <div class="tech-tag tag-1">
-                                    <span style="display: block; opacity: 0.5;">ID//ENTITY</span>
+                                    <span class="tag-label-muted">ID//ENTITY</span>
                                     <span>MERN DEVELOPER</span>
                                 </div>
                                 <div class="tech-tag tag-2">
-                                    <span style="display: block; opacity: 0.5;">ACCESS_CODE</span>
+                                    <span class="tag-label-muted">ACCESS_CODE</span>
                                     <span>ADMIN_RAGHU_0805</span>
                                 </div>
                             </div>
@@ -130,7 +148,7 @@
         </section>
 
         <!-- Technical Skill Matrix -->
-        <section id="skills" class="section-padding" style="background: rgba(255, 45, 117, 0.02);">
+        <section id="skills" class="section-padding skills-section">
             <div class="main-container">
                 <h2 class="section-title">Technical <span>Matrix_</span></h2>
                 <div class="skills-grid-main">
@@ -217,33 +235,20 @@
         <section id="projects" class="section-padding">
             <div class="main-container">
                 <h2 class="section-title">Active <span>Modules_</span></h2>
-                <div class="projects-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+                <div class="projects-grid">
                     <!-- Project 1 -->
-                    <div class="project-glass"
-                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 3rem; position: relative;">
-                        <span
-                            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-pink); margin-bottom: 1rem; display: block;">/M01_SECURITY</span>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Supply Chain Trust
-                            Analyzer</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">Security suite for
-                            detecting typosquatting & vulnerabilities in deep dependency trees.</p>
-                        <a href="https://github.com/sailesh-konimetee/dependence_checker" target="_blank"
-                            style="color: #fff; text-decoration: none; font-weight: 700; border-bottom: 1px solid var(--accent-pink); padding-bottom: 4px;">Initialize
-                            Debug →</a>
+                    <div class="project-glass">
+                        <span class="project-id">/M01_SECURITY</span>
+                        <h3 class="project-title">Supply Chain Trust Analyzer</h3>
+                        <p class="project-desc">Security suite for detecting typosquatting & vulnerabilities in deep dependency trees.</p>
+                        <a href="https://github.com/sailesh-konimetee/dependence_checker" target="_blank" class="project-link">Initialize Debug →</a>
                     </div>
                     <!-- Project 2 -->
-                    <div class="project-glass"
-                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 3rem;">
-                        <span
-                            style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-pink); margin-bottom: 1rem; display: block;">/M02_AI_ENGINE</span>
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; letter-spacing: -1px;">Investor Match App
-                        </h3>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">Full-stack semantic
-                            search platform connecting startups with strategic investor networks.</p>
-                        <a href="https://github.com/raghu0805/investormatch" target="_blank"
-                            style="color: #fff; text-decoration: none; font-weight: 700; border-bottom: 1px solid var(--accent-pink); padding-bottom: 4px;">Initialize
-                            Engine →</a>
+                    <div class="project-glass">
+                        <span class="project-id">/M02_AI_ENGINE</span>
+                        <h3 class="project-title">Investor Match App</h3>
+                        <p class="project-desc">Full-stack semantic search platform connecting startups with strategic investor networks.</p>
+                        <a href="https://github.com/raghu0805/investormatch" target="_blank" class="project-link">Initialize Engine →</a>
                     </div>
                 </div>
             </div>
@@ -253,17 +258,12 @@
         <section id="experience" class="section-padding">
             <div class="main-container">
                 <h2 class="section-title">Timeline <span>Log_</span></h2>
-                <div style="border-left: 2px solid var(--glass-border); padding-left: 3rem; margin-left: 1rem;">
-                    <div class="timeline-log" style="position: relative; margin-bottom: 4rem;">
-                        <div
-                            style="position: absolute; left: -3.4rem; top: 0rem; width: 12px; height: 12px; background: var(--accent-pink); box-shadow: 0 0 10px var(--accent-glow);">
-                        </div>
-                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-pink);">2022
-                            - PRESENT</span>
-                        <h3 style="font-size: 2rem; margin: 0.5rem 0;">B.Tech in CSBS</h3>
-                        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px;">Pursuing undergraduate
-                            degree at <strong>Panimalar Engineering College</strong>. Focusing on the intersection of
-                            deep technical architecture and business optimization.</p>
+                <div class="timeline-track">
+                    <div class="timeline-log">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2022 - PRESENT</span>
+                        <h3 class="timeline-title">B.Tech in CSBS</h3>
+                        <p class="timeline-desc">Pursuing undergraduate degree at <strong>Panimalar Engineering College</strong>. Focusing on the intersection of deep technical architecture and business optimization.</p>
                     </div>
                 </div>
             </div>
@@ -271,23 +271,15 @@
 
         <!-- Contact -->
         <section id="contact" class="section-padding">
-            <div class="main-container" style="text-align: center;">
+            <div class="main-container contact-container">
                 <h2 class="section-title">Start <span>Connection_</span></h2>
-                <p
-                    style="color: var(--text-muted); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Establishing a high-bandwidth connection for impactful engineering and innovative systems.</p>
-                <a href="mailto:sde.raghu.r@gmail.com" class="btn btn-primary"
-                    style="padding: 1.5rem 4rem; font-size: 1.2rem;">Transmit: sde.raghu.r@gmail.com</a>
-                <div class="social-footer"
-                    style="margin-top: 5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                    <a href="https://www.linkedin.com/in/raghu0805" target="_blank"
-                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">LINKEDIN_</a>
-                    <a href="https://leetcode.com/u/Raghu249/" target="_blank"
-                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">LEETCODE_</a>
-                    <a href="https://www.hackerrank.com/profile/imraghu0805" target="_blank"
-                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">HACKERRANK_</a>
-                    <a href="https://www.geeksforgeeks.org/profile/imraghhnwv" target="_blank"
-                        style="color: var(--text-muted); text-decoration: none; font-family: var(--font-mono); font-size: 0.8rem;">GFG_</a>
+                <p class="contact-desc">Establishing a high-bandwidth connection for impactful engineering and innovative systems.</p>
+                <a href="mailto:sde.raghu.r@gmail.com" class="btn btn-primary contact-btn">Transmit: sde.raghu.r@gmail.com</a>
+                <div class="social-footer">
+                    <a href="https://www.linkedin.com/in/raghu0805" target="_blank" class="footer-social-link">LINKEDIN_</a>
+                    <a href="https://leetcode.com/u/Raghu249/" target="_blank" class="footer-social-link">LEETCODE_</a>
+                    <a href="https://www.hackerrank.com/profile/imraghu0805" target="_blank" class="footer-social-link">HACKERRANK_</a>
+                    <a href="https://www.geeksforgeeks.org/profile/imraghhnwv" target="_blank" class="footer-social-link">GFG_</a>
                 </div>
             </div>
         </section>
